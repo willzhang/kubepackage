@@ -1,2 +1,5 @@
 FROM busybox
-COPY packages /workspace/packages
+
+COPY packages /workspace/
+
+WORKDIR /workspace
