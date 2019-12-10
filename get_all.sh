@@ -2,6 +2,8 @@
 
 set -e
 
+path=`dirname $0`
+
 #sed 's/^/export /' version.list > /etc/profile.d/version.sh
 #sudo source /etc/profile.d/version.sh
 echo "harbor_version：$harbor_version"
