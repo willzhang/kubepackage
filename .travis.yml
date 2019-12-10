@@ -4,13 +4,16 @@ services:
 - docker
 
 env:
-  - REQ_FILE=".version.list"
+  - REQ_FILE="./version.list"
 
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y bzip2
 - while sleep 5m; do echo "=====[ $SECONDS seconds, still building... ]====="; done &
 - echo "kubernetes-version： $kubernetes_version"
+
+before_script:
+  - source version.env
 
 script:
 - bash get_all.sh
