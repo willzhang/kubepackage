@@ -18,7 +18,7 @@ before_script:
   - echo $kubernetes_version
 
 script:
-- bash get_all.sh
+- bash download_all.sh
 - docker build -t willdockerhub/kubepackage:${kubernetes_version} .
 
 deploy:
