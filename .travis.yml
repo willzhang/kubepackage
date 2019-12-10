@@ -13,7 +13,9 @@ before_install:
 - echo "kubernetes-version： $kubernetes_version"
 
 before_script:
+  - sed 's/^/export /' version.list > version.env
   - source version.env
+  - echo $kubernetes_version
 
 script:
 - bash get_all.sh
