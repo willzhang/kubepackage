@@ -4,7 +4,7 @@ set -e
 
 path=`dirname $0`
 
-PKG_PATH=${path}/packages/kubernetes
+PKG_PATH=${path}/packages/flannel
 
 kubernetes_repo=`cat ${path}/k8s-images-list.txt |grep kube-apiserver |awk -F '/' '{print $1}'`
 

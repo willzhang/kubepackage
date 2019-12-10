@@ -4,7 +4,7 @@ set -e
 
 path=`dirname $0`
 
-PKG_PATH=${path}/packages/kubernetes
+PKG_PATH=${path}/packages
 
 echo "=== download cfssl tools ==="
 export CFSSL_URL=https://pkg.cfssl.org/R1.2

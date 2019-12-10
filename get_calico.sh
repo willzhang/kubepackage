@@ -4,7 +4,7 @@ set -e
 
 path=`dirname $0`
 
-PKG_PATH=${path}/packages/kubernetes
+PKG_PATH=${path}/packages/calico
 
 echo "=== downloading calico release package ==="
 curl -L -o ${PKG_PATH}/calico-${calico_version}.tgz https://github.com/projectcalico/calico/releases/download/${calico_version}/release-${calico_version}.tgz

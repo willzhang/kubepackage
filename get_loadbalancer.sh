@@ -1,12 +1,11 @@
 #! /bin/bash
 set -e
 path=`dirname $0`
-PKG_PATH=${path}/packages/loadbalancer
+PKG_PATH=${path}/packages
 
-echo "build wise2c/k8s-keepalived:${keepalived_version} image"
-cd ${path}/keepalived
-docker build -t willdockerhub/k8s-keepalived:${keepalived_version} .
-cd ..
+echo "pull willdockerhub/k8s-keepalived:${keepalived_version} image"
+
+docker pull willdockerhub/k8s-keepalived:${keepalived_version}
 docker save willdockerhub/k8s-keepalived:${keepalived_version} -o ${PKG_PATH}/keepalived-${keepalived_version}.tar
 bzip2 -z --best ${PKG_PATH}/keepalived-${keepalived_version}.tar
 

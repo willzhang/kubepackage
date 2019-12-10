@@ -4,7 +4,7 @@ set -e
 
 path=`dirname $0`
 
-PKG_PATH=${path}/packages/kubernetes
+PKG_PATH=${path}/packages
 
 echo "=== download helm binary package ==="
 rm ${PKG_PATH}/helm-linux-amd64.tar.gz -f

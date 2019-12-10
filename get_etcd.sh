@@ -3,7 +3,7 @@
 set -e
 
 path=`dirname $0`
-PKG_PATH=${path}/packages/etcd
+PKG_PATH=${path}/packages
 
 image=k8s.gcr.io/etcd-amd64:${etcd_version}
 

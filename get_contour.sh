@@ -4,7 +4,7 @@ set -e
 
 path=`dirname $0`
 
-PKG_PATH=${path}/packages/kubernetes
+PKG_PATH=${path}/packages/contour
 
 contour_repo="projectcontour"
 contour_long_repo="docker.io/projectcontour"
