@@ -4,7 +4,7 @@ services:
 - docker
 
 env:
-  - REQ_FILE="./version.list"
+  - kubernetes_version=1.16.3
 
 before_install:
 - sudo apt-get -qq update
